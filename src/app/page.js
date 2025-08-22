@@ -1,5 +1,4 @@
 import { trendingMovies, trendingShows, upcoming } from "@/lib/tmdb";
-import Card from "./components/Card";
 import UpcomingCarousel from "./components/UpcomingCarousel";
 import SliderSection from "./components/SliderSection";
 import React from "react";

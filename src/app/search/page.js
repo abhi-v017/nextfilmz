@@ -3,7 +3,7 @@ import { search } from "@/lib/tmdb";
 import Card from "@/app/components/Card";
 
 export default async function SearchPage({ searchParams }) {
-    const query = searchParams?.query || "";
+    const query = await searchParams?.query || "";
     let results = [];
     if (query) {
     results = await search({ query });
@@ -30,9 +30,9 @@ export default async function SearchPage({ searchParams }) {
                 vote_average={item.vote_average}
                 to={
                 item.media_type === "movie"
-                    ? `/movie/${item.id}`
+                    ? `details/movie/${item.id}`
                     : item.media_type === "tv"
-                    ? `/shows/${item.id}`
+                    ? `details/shows/${item.id}`
                     : "#"
                 }
             />

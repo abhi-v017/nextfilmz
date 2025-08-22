@@ -1,5 +1,5 @@
 import React from 'react'
-import SliderSection from '../components/SliderSection'
+import SliderSection from '../../components/SliderSection'
 import { trendingShows, topratedShow, popularShows } from "@/lib/tmdb";
 
 export default async function page() {

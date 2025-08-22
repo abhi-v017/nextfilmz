@@ -8,7 +8,7 @@ function Navbar() {
 
     const handleKeyDown = (e) => {
     if (e.key === "Enter" && search.trim()) {
-        router.push(`/pages/search?query=${encodeURIComponent(search.trim())}`);
+        router.push(`/search?query=${encodeURIComponent(search.trim())}`);
     }
     };
 
@@ -22,10 +22,10 @@ function Navbar() {
             <a href="/">Home</a>
           </li>
           <li className="hover:text-gray-400">
-            <a href="/movies">Movies</a>
+            <a href="pages/movies">Movies</a>
           </li>
           <li className="hover:text-gray-400">
-            <a href="/tv">TV Shows</a>
+            <a href="pages/tv">TV Shows</a>
           </li>
         </ul>
         <div className="cursor-pointer flex items-center space-x-2 bg-gray-800 px-2 py-1  rounded-full ">

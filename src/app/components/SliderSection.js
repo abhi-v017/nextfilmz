@@ -35,7 +35,7 @@ export default function SliderSection({ items, type }) {
             title={type === "movie" ? item.title : item.name}
             image={`https://image.tmdb.org/t/p/w500${item.poster_path}`}
             vote_average={item.vote_average}
-            to={type === "movie" ? `/movie/${item.id}` : `/shows/${item.id}`}
+            to={type === "movie" ? `/details/movie/${item.id}` : `/details/shows/${item.id}`}
             />
         ))}
         </div>

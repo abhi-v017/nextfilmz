@@ -1,6 +1,6 @@
 import React from 'react'
-import SliderSection from '../components/SliderSection'
-import { trendingMovies, trendingShows, topratedMovie, topratedShow, popularMovies, popularShows, upcomingShows, upcoming } from "@/lib/tmdb";
+import SliderSection from '../../components/SliderSection'
+import { trendingMovies, topratedMovie,  popularMovies, upcoming } from "@/lib/tmdb";
 
 
 export default async function page() {
