@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 function Navbar() {
     const [search, setSearch] = useState("");
@@ -9,23 +10,24 @@ function Navbar() {
     const handleKeyDown = (e) => {
     if (e.key === "Enter" && search.trim()) {
         router.push(`/search?query=${encodeURIComponent(search.trim())}`);
+        setSearch("");
     }
     };
 
     return (
       <div className="flex justify-between items-center p-2 bg-gray-900 text-white">
         <h1 className="font-semibold italic">
-          <a href="/">Nextfilmz</a>
+          <Link href="/">Nextfilmz</Link>
         </h1>
         <ul className="flex space-x-8 justify-between items-center">
           <li className="hover:text-gray-400">
-            <a href="/">Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li className="hover:text-gray-400">
-            <a href="pages/movies">Movies</a>
+            <Link href="pages/movies">Movies</Link>
           </li>
           <li className="hover:text-gray-400">
-            <a href="pages/tv">TV Shows</a>
+            <Link href="pages/tv">TV Shows</Link>
           </li>
         </ul>
         <div className="cursor-pointer flex items-center space-x-2 bg-gray-800 px-2 py-1  rounded-full ">

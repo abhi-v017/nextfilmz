@@ -1,4 +1,5 @@
 import {show } from "@/lib/tmdb";
+import React from "react";
 
 export default async function MovieDetails({ params }) {
     const tappedshow = await show(params.id);
@@ -10,6 +11,7 @@ export default async function MovieDetails({ params }) {
         <img
             className="h-[400px] rounded my-2"
             src={`https://image.tmdb.org/t/p/w500${tappedshow.poster_path}`}
+            alt={tappedshow.name}
         />
         <div className="flex gap-2 items-center justify-center text-center">
             <h1 className="font-bold text-xl italic">{tappedshow.name}</h1>
@@ -30,7 +32,7 @@ export default async function MovieDetails({ params }) {
             </span>
             ))}
         </div>
-        <p className="text-lg px-4">{tappedshow.overview}</p>
+        <p className="text-lg px-4">{`${tappedshow.overview}`}</p>
         <h1>Number of seasons: {tappedshow.number_of_seasons}</h1>
         <h1>Number of episodes: {tappedshow.number_of_episodes}</h1>
         </div>
