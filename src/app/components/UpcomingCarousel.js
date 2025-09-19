@@ -16,7 +16,7 @@ export default function UpcomingCarousel({ movies }) {
     const movie = movies[current];
 
     return (
-    <div className="w-full flex justify-center items-center mb-8 ">
+    <div className="w-full flex justify-center items-center mb-8 mt-2">
         <div className="relative w-[1020px] h-[400px] rounded-2xl overflow-hidden shadow-lg max-sm:w-[400px] max-sm:h-[200px]">
         <img
             src={`https://image.tmdb.org/t/p/w780${
