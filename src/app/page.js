@@ -12,10 +12,14 @@ export default async function Home() {
     <div>
       <UpcomingCarousel movies={upcomingMovies} />
 
-      <h1 className="mb-4 text-2xl font-semibold px-2">Trending Movies</h1>
+      <h1 className="mb-4 text-2xl font-semibold px-2 max-sm:font-medium max-sm:text-lg max-sm:mb-2">
+        Trending Movies
+      </h1>
       <SliderSection items={movies} type="movie" />
 
-      <h1 className="mb-4 text-2xl font-semibold px-2">Trending Tv Shows</h1>
+      <h1 className="mb-4 text-2xl font-semibold px-2 max-sm:font-medium max-sm:text-lg max-sm:mb-2">
+        Trending Tv Shows
+      </h1>
       <SliderSection items={shows} type="show" />
     </div>
   );

@@ -6,9 +6,9 @@ function Card({ id, title, image, vote_average,to }) {
     return (
     <Link
         href={to}
-        className="group rounded-2xl bg-neutral-900 ring-1 ring-white/10 transition hover:-translate-y-0.5 hover:shadow-xl w-56 flex-shrink-0"
+        className="group rounded-2xl bg-neutral-900 ring-1 ring-white/10 transition hover:-translate-y-0.5 hover:shadow-xl w-56 flex-shrink-0 max-sm:w-40"
     >
-        <div className="relative aspect-[2/3] w-full overflow-hidden rounded-t-2xl h-80">
+        <div className="relative aspect-[2/3] w-full overflow-hidden rounded-t-2xl h-80 max-sm:h-50">
         <img
             src={image}
             alt={title}
@@ -22,7 +22,7 @@ function Card({ id, title, image, vote_average,to }) {
         ) : null}
         </div>
         <div className="p-3">
-            <h3 className="line-clamp-2 text-sm font-medium">{title}</h3>
+            <h3 className="line-clamp-2 text-sm font-medium ">{title}</h3>
         </div>
     </Link>
     );

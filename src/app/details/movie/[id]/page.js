@@ -12,14 +12,14 @@ export default async function MovieDetails({ params }) {
         alt={tappedmovie.title}
       />
       <div className="flex gap-2 items-center justify-center text-center">
-        <h1 className="font-bold text-xl italic">{tappedmovie.title}</h1>
+        <h1 className="font-bold text-xl italic max-sm:text-lg">{tappedmovie.title}</h1>
         {tappedmovie.vote_average ? (
           <div className=" rounded-full bg-black px-2 py-1 text-xs">
             ⭐ {tappedmovie.vote_average.toFixed(1)}
           </div>
         ) : null}
       </div>
-      <div className="flex flex-wrap items-center gap-2 mt-4">
+      <div className="flex flex-wrap items-center gap-2 mt-4 max-sm:mt-2">
         <h1 className="font-bold">Genres:</h1>
         {tappedmovie.genres.map((genre) => (
           <span
@@ -30,7 +30,7 @@ export default async function MovieDetails({ params }) {
           </span>
         ))}
       </div>
-      <p className="text-lg px-4">{`${tappedmovie.overview}`}</p>
+      <p className="text-lg px-4 max-sm:text-base">{`${tappedmovie.overview}`}</p>
       <h1 className="">Release Date: {tappedmovie.release_date}</h1>
       <h1>Duration: {tappedmovie.runtime}</h1>
       <h1>Budget: {tappedmovie.budget}</h1>
